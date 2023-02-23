@@ -31,6 +31,46 @@ function describeAge(age) {
 
 
 
-console.log(describeAge(31));
+//console.log(describeAge(31));
 
 //--
+
+
+// TODO: Please write a function that sums a list, but ignores any duplicate items in the list.
+
+// function sumNoDuplicates(numList) {
+//     let sum = 0;
+//     if (numList.length === 0) {
+//         return sum;
+//     } else {
+//         // let uniqueNumList = numList.filter((c, index) => {return numList.indexOf(c) === index});
+//         // let sumUniqueNumList = uniqueNumList.reduce( (a,b) => {return a + b});
+//         // return sumUniqueNumList;
+
+//         // let sortedList = numList.sort((a,b) => {return a-b});
+//         // let duplicateRemoved = sortedList
+
+//         for (num of numList) {
+//             for (n of numList){
+//                 if (num = n){
+//                     console.log('duplicate', num);
+//                 } else {
+//                     console.log('not duplicate', num);
+//                 }
+//             }
+//         }
+
+//         return sum;
+//     }
+// }
+
+// const numList = [1,1,2,3];
+// const empty = [];
+// console.log(sumNoDuplicates(numList));
+
+function sumNoDuplicates(numList) {
+    //filters out based on if the first index is also the last
+    const uniqueArr=numList.filter((num,index)=>numList.indexOf(num)===index&&numList.lastIndexOf(num)===index);
+    //adds the remaining array values
+    return uniqueArr.reduce((x,y)=>x+y,0);
+    }
