@@ -37,6 +37,8 @@ function describeAge(age) {
 
 
 // TODO: Please write a function that sums a list, but ignores any duplicate items in the list.
+//* https://www.codewars.com/kata/5993fb6c4f5d9f770c0000f2/solutions/javascript
+
 
 // function sumNoDuplicates(numList) {
 //     let sum = 0;
